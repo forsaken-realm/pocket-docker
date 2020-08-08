@@ -1,7 +1,6 @@
-import 'dart:ui';
-import 'body/body.dart';
-
 import 'package:flutter/material.dart';
+import 'body/commons/collapsing_navigation_drawer_widget.dart';
+import 'body/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,31 +38,13 @@ class _HomeState extends State<Home> {
         title: Text("DOCKER"),
         centerTitle: true,
       ),
-      body: new_body,
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blueGrey,
-        elevation: 10,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Image.network(
-              'https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/97_Docker-512.png',
-              width: 25,
-              height: 25,
-            ),
-            title: Text('Home'),
+      body: Stack(
+        children: <Widget>[
+          Container(
+            color: Colors.white,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.looks),
-            title: Text('Manage'),
-          ),
+          CollapsingNavigationDrawer(),
         ],
-        currentIndex: _selectIndex,
-        onTap: (index) => {
-          setState(() {
-            _selectIndex = index;
-          })
-        },
-        selectedItemColor: Colors.white70,
       ),
     );
   }
