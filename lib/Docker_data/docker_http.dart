@@ -8,9 +8,11 @@ class DockerFunt extends StatefulWidget {
 class _DockerFuntState extends State<DockerFunt> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: <Widget>[TextField()],
+    return Container(
+      alignment: Alignment.center,
+      child: Column(
+        children: <Widget>[TextField()],
+      ),
     );
   }
 }
