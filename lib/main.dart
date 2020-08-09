@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'body/commons/collapsing_navigation_drawer_widget.dart';
-import 'body/theme.dart';
+import 'navigation_bar/commons/collapsing_navigation_drawer_widget.dart';
+import 'navigation_bar/theme.dart';
+import 'Docker_data/docker_http.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,9 +41,7 @@ class _HomeState extends State<Home> {
       ),
       body: Stack(
         children: <Widget>[
-          Container(
-            color: Colors.white,
-          ),
+          DockerFunt(),
           CollapsingNavigationDrawer(),
         ],
       ),
