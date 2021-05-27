@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.blueGrey[100],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[900],
-        title: Text("DOCKER"),
+        title: Text("Pocket Docker"),
         centerTitle: true,
       ),
       body: Stack(

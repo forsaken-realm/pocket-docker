@@ -10,8 +10,10 @@ class _DockerFuntState extends State<DockerFunt> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Column(
-        children: <Widget>[TextField()],
+      child: Text(
+        'Hello',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 20),
       ),
     );
   }

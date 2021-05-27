@@ -21,7 +21,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   void initState() {
     super.initState();
     _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 200));
+        AnimationController(vsync: this, duration: Duration(microseconds: 200));
     widthAnimation = Tween<double>(begin: maxWidth, end: minWidth)
         .animate(_animationController);
   }
